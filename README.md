@@ -35,15 +35,17 @@ Follow these steps to set up your development environment:
    yarn dev
    ```
 
-   The development server should now be running at [http://localhost:5173](http://localhost:5173).
+The development server should now be running at [http://localhost:5173](http://localhost:5173).
 
 
 To test AI integration, you will need a valid API key for the follwoing services:
+
 [OpenAI API](https://beta.openai.com/). 
+
 [ElevenLabs API](https://elevenlabs.io/).
 
 
-Once you have an API key, create a file named `.env` in the root directory of the project and add the following line to it:
+Once you have an API keys, create a file named `.env` in the root directory of the project and add the following line to it:
 
 ```bash
 OPENAI_API_KEY=<your-api-key>
