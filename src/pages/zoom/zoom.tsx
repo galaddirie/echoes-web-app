@@ -287,14 +287,14 @@ export const Zoom: React.FC<ZoomProps> = ({ characters }) => {
                         >
                             <PhoneOff size={24} className="text-white"/>
                         </button>
-                        <button className=" p-4 h-10 bg-red-500 hover:bg-red-600
+                        {/* <button className=" p-4 h-10 bg-red-500 hover:bg-red-600
                         rounded-full flex items-center justify-center ml-4"
                         onClick={() => {
                             handleJoinMeeting();
                         }}
                         >
                             <RefreshCcw size={24} className="text-white"/> reload script
-                        </button>
+                        </button> */}
                     </div>
                     :
                     <button
