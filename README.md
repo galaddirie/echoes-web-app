@@ -40,9 +40,9 @@ The development server should now be running at [http://localhost:5173](http://l
 
 To test AI integration, you will need a valid API key for the follwoing services:
 
-[OpenAI API](https://beta.openai.com/). 
+- [OpenAI API](https://beta.openai.com/). 
 
-[ElevenLabs API](https://elevenlabs.io/).
+- [ElevenLabs API](https://elevenlabs.io/).
 
 
 Once you have an API keys, create a file named `.env` in the root directory of the project and add the following line to it:
