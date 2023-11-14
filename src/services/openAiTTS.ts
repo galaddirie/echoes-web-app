@@ -34,8 +34,8 @@ import OpenAI from 'openai';
 
 
 const openai = new OpenAI({
-    apiKey: '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',
-    organization: 'org-duF7bTypTsmtLg7UBTDIDUki',
+    apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+    organization: import.meta.env.VITE_OPENAI_ORG_ID,
     dangerouslyAllowBrowser: true,
 });
 
