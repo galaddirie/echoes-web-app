@@ -27,6 +27,9 @@ import tony1 from "../../assets/generated/tony1.mp3";
 import logan1 from "../../assets/generated/logan1.mp3";
 import jackson1 from "../../assets/generated/jackson1.mp3";
 import noah2 from "../../assets/generated/noah2v2.mp3";
+
+import joinMeeting from "../../assets/join.mp3";
+import leaveMeeting from "../../assets/leave.mp3";
 export interface ZoomProps {
     characters: CharacterType[];
 }
@@ -83,6 +86,8 @@ export const Zoom: React.FC<ZoomProps> = ({ characters }) => {
     const [talkingCharacter, setTalkingCharacter] = useState<number | null>(null);
     const [avgVolume, setAvgVolume] = useState(0); // Add state to hold average volume
 
+    const joinAudio = new Audio(joinMeeting);
+    const leaveAudio = new Audio(leaveMeeting);
 
     const handleTalking = (characterId: number, isTalking: boolean) => {
         if (isTalking) {
@@ -188,10 +193,14 @@ export const Zoom: React.FC<ZoomProps> = ({ characters }) => {
             stopSimulatingTalking(); // Stop simulating when user joins
         }
         setLoading(false);
+        // play join meeting audio
+        joinAudio.play();
         setLoaded(true);
 
         await playAudioSequentially(audioStreams);
         setScript(script);
+
+        handleLeaveMeeting();
 
 
     }
@@ -199,6 +208,8 @@ export const Zoom: React.FC<ZoomProps> = ({ characters }) => {
     const handleLeaveMeeting = () => {
         console.log("leaving meeting...");
         setLoaded(false);
+        // play leave meeting audio
+        leaveAudio.play();
         setSimulateTalking(true);
         // setScript([]);
     }

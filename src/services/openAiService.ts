@@ -3,8 +3,8 @@ import { Character, Dialog } from '../types/character';
 import {baseSceneTemplate} from '../pages/zoom/zoomPrompt';
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY || "",
-    organization: process.env.OPENAI_ORG_ID || "",
+    apiKey: import.meta.env.OPENAI_API_KEY || "",
+    organization: import.meta.env.OPENAI_ORG_ID || "",
     dangerouslyAllowBrowser: true,
 });
 

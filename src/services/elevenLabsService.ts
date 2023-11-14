@@ -129,6 +129,6 @@ class ElevenLabs {
 
 }
 
-const elevenLabs = new ElevenLabs(process.env.ELEVENLABS_API_KEY || '');
+const elevenLabs = new ElevenLabs(import.meta.env.ELEVENLABS_API_KEY || '');
 
 export default elevenLabs;
